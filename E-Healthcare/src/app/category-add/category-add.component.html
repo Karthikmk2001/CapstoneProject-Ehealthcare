@@ -1,0 +1,42 @@
+<h3>Add New Item</h3>
+<br />
+<form (ngSubmit)="addCategory()">
+  <div class="mb-3">
+    <!-- <label for="name" class="form-label">Name</label> -->
+    <input
+      type="text"
+      class="form-control"
+      name="name"
+      [(ngModel)]="this.categoryitem.categoryName"
+      placeholder="Enter Name"
+    />
+  </div>
+
+  <div class="mb-3">
+    <!-- <label for="email" class="form-label">Email</label> -->
+    <input
+      type="text"
+      class="form-control"
+      name="categorydescription"
+      [(ngModel)]="this.categoryitem.categoryDescription"
+      placeholder="Enter Description"
+    />
+  </div>
+
+  <div class="mb-3">
+    <!-- <label for="name" class="form-label">Name</label> -->
+    <input
+      type="Date"
+      class="form-control"
+      name="date"
+      [(ngModel)]="this.categoryitem.categoryAddedDate"
+    />
+  </div>
+
+  <br />
+
+  <div class="mb-3">
+    <button type="submit" class="btn btn-success">Submit</button> |
+    <button type="reset" class="btn btn-danger">Clear</button>
+  </div>
+</form>

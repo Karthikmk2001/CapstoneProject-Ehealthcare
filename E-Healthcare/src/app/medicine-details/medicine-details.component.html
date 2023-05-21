@@ -1,0 +1,54 @@
+<div class="card">
+  <div class="card-header">
+    <h3>
+      Details of <span>{{ medicineitem[0].medicineName }}</span>
+    </h3>
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>ID</th>
+          <td>{{ this.medicineitem[0].medicineId }}</td>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <td>{{ this.medicineitem[0].medicineName }}</td>
+        </tr>
+
+        <tr>
+          <th>Price</th>
+          <td>{{ this.medicineitem[0].price }}</td>
+        </tr>
+        <tr>
+          <th>Quantity</th>
+          <td>{{ this.medicineitem[0].availableQuantity }}</td>
+        </tr>
+        <tr>
+          <th>Category</th>
+          <td>{{ this.medicineitem[0].categoryId }}</td>
+        </tr>
+        <tr>
+          <th>AddedDate</th>
+          <td>{{ this.medicineitem[0].medicineAddedDate }}</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <a routerLink="/food-list" class="btn btn-secondary">Back</a> |
+            <a
+              [routerLink]="[
+                '/medicine-update',
+                this.medicineitem[0].medicineId
+              ]"
+              class="btn btn-success"
+              >Update</a
+            >
+            |
+            <button class="btn btn-danger" (click)="deleteMed()">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

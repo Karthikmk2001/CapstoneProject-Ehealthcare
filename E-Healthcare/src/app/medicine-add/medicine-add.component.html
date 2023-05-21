@@ -1,0 +1,71 @@
+<h3>Add New Item</h3>
+<br />
+<form (ngSubmit)="addMedicine()">
+  <div class="mb-3">
+    <!-- <label for="name" class="form-label">Name</label> -->
+    <input
+      type="text"
+      class="form-control"
+      name="name"
+      [(ngModel)]="this.medicineitem.medicineName"
+      placeholder="Enter Name"
+    />
+  </div>
+
+  <div class="mb-3">
+    <!-- <label for="email" class="form-label">Email</label> -->
+    <input
+      type="text"
+      class="form-control"
+      name="image"
+      [(ngModel)]="this.medicineitem.image"
+      placeholder="Enter Image Url"
+    />
+  </div>
+  <div class="mb-3">
+    <!-- <label for="name" class="form-label">Name</label> -->
+    <input
+      type="text"
+      class="form-control"
+      name="price"
+      [(ngModel)]="this.medicineitem.price"
+      placeholder="Enter Price"
+    />
+  </div>
+  <div class="mb-3">
+    <!-- <label for="name" class="form-label">Name</label> -->
+    <input
+      type="text"
+      class="form-control"
+      name="quantity"
+      [(ngModel)]="this.medicineitem.availableQuantity"
+      placeholder="Enter Quantity"
+    />
+  </div>
+  <div class="mb-3">
+    <!-- <label for="name" class="form-label">Name</label> -->
+    <input
+      type="text"
+      class="form-control"
+      name="categoryid"
+      [(ngModel)]="this.medicineitem.categoryId"
+      placeholder="Enter categoryId"
+    />
+  </div>
+  <div class="mb-3">
+    <!-- <label for="name" class="form-label">Name</label> -->
+    <input
+      type="Date"
+      class="form-control"
+      name="date"
+      [(ngModel)]="this.medicineitem.medicineAddedDate"
+    />
+  </div>
+
+  <br />
+
+  <div class="mb-3">
+    <button type="submit" class="btn btn-success">Submit</button> |
+    <button type="reset" class="btn btn-danger">Clear</button>
+  </div>
+</form>

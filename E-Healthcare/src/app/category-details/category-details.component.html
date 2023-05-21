@@ -1,0 +1,45 @@
+<div class="card">
+  <div class="card-header">
+    <!-- <h3> -->
+    <!-- Details of <span>{{ this.categoryitem[0].categoryName }}</span>
+    </h3> -->
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>ID</th>
+          <td>{{ this.categoryitem[0].categoryId }}</td>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <td>{{ this.categoryitem[0].categoryName }}</td>
+        </tr>
+        <tr>
+          <th>Category Description</th>
+          <td>{{ this.categoryitem[0].categoryDescription }}</td>
+        </tr>
+        <tr>
+          <th>AddedDate</th>
+          <td>{{ this.categoryitem[0].categoryAddedDate }}</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <a routerLink="/food-list" class="btn btn-secondary">Back</a> |
+            <a
+              [routerLink]="[
+                '/category-update',
+                this.categoryitem[0].categoryId
+              ]"
+              class="btn btn-success"
+              >Update</a
+            >
+            |
+            <button class="btn btn-danger" (click)="deleteCat()">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
